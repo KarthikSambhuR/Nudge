@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="font.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Settings</h1>
+            <p class="subtitle">Configure your break reminders.</p>
+        </header>
+        
+        <main class="settings-form">
+            <div class="settings-grid">
+                <div class="form-group">
+                    <label for="interval">Break Interval</label>
+                    <input type="number" id="interval" min="1" max="180" value="20">
+                    <div class="info-text">Minutes between breaks</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration">Break Duration</label>
+                    <input type="number" id="duration" min="5" max="300" value="20">
+                    <div class="info-text">Seconds per break</div>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label for="autostart">Start with system</label>
+                <input type="checkbox" id="autostart">
+            </div>
+            
+            <button id="save-btn">Save Settings</button>
+            
+            <div id="status-message"></div>
+        </main>
+    </div>
+
+    <script type="module" src="settings.js"></script>
+</body>
+</html>
